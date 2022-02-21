@@ -17,6 +17,7 @@
             <h6>{{$train->Numero_carrozze}}</h6>
             <h6>{{$train->In_orario}}</h6>
             <h6>{{$train->Cancellato}}</h6>
+            <a href="{{ route('trains.show', $train) }}">View Train</a>
         </div>
    @endforeach
 @endsection

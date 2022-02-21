@@ -11,6 +11,11 @@ class TrainController extends Controller
 
         $trains = Trains::all();
         $data = ['trains' => $trains];
-        return view('Home' , $data);
+        return view('trains.Home' , $data);
+    }
+
+    public function show(Trains $trains) //findOrFail
+    {
+        return view('trains.show', ['trains' => $trains]);
     }
 }
